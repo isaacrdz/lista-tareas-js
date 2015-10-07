@@ -12,7 +12,6 @@
 				contenido = document.createTextNode(tarea);
 
 
-
 		if (tarea === "") {
 			tareaInput.setAttribute("placeholder", "Agregar una tarea valida");
 			tareaInput.className = "error";
@@ -39,11 +38,12 @@
 		};
 
 		var comprobarInput =  function(){
-			
+			tareaInput.className = "" ;
+			tareaInput.setAttribute("placeholder", "Agregar tu tarea");
 		};
 
 		var eliminarTarea =  function(){
-			
+			this.parentNode.removeChild(this);
 		};
 
 		//Eventos
